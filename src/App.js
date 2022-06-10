@@ -1,5 +1,5 @@
 import NavBar from "./Components/NavBar"
-import Cart from "./Components/itemListContainer"
+import Cart from "./Components/ItemListContainer"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
