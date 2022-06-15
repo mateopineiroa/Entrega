@@ -1,17 +1,17 @@
 import {useState} from "react"
 
 const ItemCount = (prop) => {
-    const tope = prop.stock
-    const [cantidad, cambiarCantidad] = useState(prop.initial) //Estado inicial: 0
+    
+    const [cantidad, cambiarCantidad] = useState(parseInt(prop.initial)) //Estado inicial: 0
     const aumentoCantidad = (tope) => {
         if (cantidad!=tope){
-            cambiarCantidad(parseInt(cantidad)+1)
+            cambiarCantidad(cantidad+1)
         } else {
             console.log("Lo siento pero el tope es:", tope)
         }
     }
     const disminuyoCantidad = () => {
-        if (cantidad != 0)
+        if (cantidad != 1)
             cambiarCantidad(cantidad-1)
     }
     return (
