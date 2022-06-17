@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail.js"
 
 const promesa = new Promise(res => {
     setTimeout(() => {
-        res({stock:"23", ubicacionProducto: "Muy lejos, ni te gastes"})
+        res({titulo:"BMW Serie 1 2.0 120i Coupe Active 156cv", detalle: "Bmw 120i Coupé Automático Secuencial. Segundo dueño. Ficha en Scarpa, cubiertas Bridgestone nuevas. Excelente estado. Posible permuta. Financiación de hasta USD 5.000 hasta en 24 cuotas.", link:"../img/ImagenProducto.webp"})
     }, 2000)
 })
 
@@ -17,8 +17,7 @@ const ItemDetailContainer = () => {
     console.log(elemento)
     return (
         <div>
-            <ItemDetail />
-            <p>Texto random {elemento.ubicacionProducto}</p>
+            <ItemDetail prop={elemento} />
         </div>
     )
 }
