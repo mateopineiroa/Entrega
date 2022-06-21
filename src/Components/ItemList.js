@@ -1,20 +1,13 @@
-import {useState} from 'react'
 import Item from "./Item.js"
 
-const ItemList = () => {
+const ItemList = ({producto}) => {
     //const objeto = {producto:"Arroz"};
-    const [elemento, setElemento] = useState({stock:"Cargando...", ubicacionProducto: "Cargando..."})      /* Arreglo vacio */
-    let promesita = new Promise(res => {  
-        setTimeout(() => {
-            res([{stock:23, ubicacionProducto: "Muy lejos, ni te gastes"}])
-        }, 2000)
-    })
-    promesita.then((data) => {
-        //console.log("data es:", data)
-        setElemento(data)
-    })
+    console.log("El prop es",producto)
+    
     return (
-        <Item elemento= {elemento} />
+        producto.map(p =>
+            <Item producto= {p.producto} ubicacion= {p.ubicacionProducto} stock={p.stock} />
+            )
         )
 }
 

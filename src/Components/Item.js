@@ -1,7 +1,6 @@
-  import {useState} from "react"
 
 
-const Item = (prop) => {
+const Item = ({producto, stock, ubicacion}) => {
     /* const [elemento, setElemento] = useState({stock:"Cargando...", ubicacionProducto: "Cargando..."})     //Arreglo vacio
     let promesita = new Promise(res => {  
         setTimeout(() => {
@@ -14,9 +13,9 @@ const Item = (prop) => {
     }) */
     return (
         <div class="item">           {/* react no me deja añadir style a prepo(?) */}
-            <p><b>Elemento:</b> {prop.elemento.producto}</p>
-            <p><b>Stock:</b> {prop.elemento.stock}</p>
-            <p><b>Hay que ir a comprarlo a:</b> {prop.elemento.ubicacionProducto}</p>
+            <p><b>Elemento:</b> {producto}</p>
+            <p><b>Stock:</b> {stock}</p>
+            <p><b>Hay que ir a comprarlo a:</b> {ubicacion}</p>
         </div>
     )
 }
