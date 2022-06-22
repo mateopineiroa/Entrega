@@ -7,7 +7,6 @@ import asyncMock from '../utils/asyncMock';
 import productos from "../utils/productos"
 
 const ItemListContainer = (prop) => {
-  console.log("El objeto del greeting es:", prop, prop.greeting)
   const [elemento, setElemento] = useState([])      /* Arreglo vacio */
 
   useEffect(() => {

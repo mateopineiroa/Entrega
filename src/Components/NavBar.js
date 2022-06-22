@@ -3,7 +3,7 @@ import Cart from "./CartWidget"
 const Nav = (props) => {
     console.log("NavBar importado exitosamente", props.test)
     return (
-        <div class="box">
+        <div class="box nav">
             <Cart />
             <h3>Inmobiliaria Piñeiro</h3>
             <ul>

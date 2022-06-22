@@ -2,12 +2,11 @@
 
 
 const ItemDetail = (prop) => {
-    let link = prop.link
-    console.log(prop)
+    console.log("El elemento que me llega es",prop)
     return (
         <div class="box">
             <h3>{prop.titulo}</h3>
-            <img src={link} alt="Imagen de producto"></img>
+            <img src={prop.link} alt="Imagen de producto"></img>
             <p>{prop.detalle}</p>
         </div>
     )
