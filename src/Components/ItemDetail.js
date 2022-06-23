@@ -2,12 +2,13 @@
 
 
 const ItemDetail = (prop) => {
-    console.log("El elemento que me llega es",prop)
+    console.log("El elemento que me llega en detail es",prop.lista)
+    
     return (
         <div class="box">
-            <h3>{prop.titulo}</h3>
-            <img src={prop.link} alt="Imagen de producto"></img>
-            <p>{prop.detalle}</p>
+            <h3>{prop.lista[prop.indice].titulo}</h3>
+            <img src={prop.lista[prop.indice].link} alt="Imagen de producto"></img>
+            <p>{prop.lista[prop.indice].detalle}</p>
         </div>
     )
 }

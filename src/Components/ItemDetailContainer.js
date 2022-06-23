@@ -6,7 +6,7 @@ import ItemDetail from "./ItemDetail.js"
 
 const ItemDetailContainer = () => {
   /* En el container va toda la logica. Se consiguen los elementos que contiene. Estan los estados, los efectos. */
-  const [elemento, setElemento] = useState({})      /* Un objeto unicamente */
+  const [elemento, setElemento] = useState([])      /* Un objeto unicamente */
   
   
   /* fetch('https://fakestoreapi.com/products')
@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const promesa = new Promise(res => {
       setTimeout(() => {
-        res({titulo:"BMW Serie 1 2.0 120i Coupe Active 156cv", detalle: "Bmw 120i Coupé Automático Secuencial. Segundo dueño. Ficha en Scarpa, cubiertas Bridgestone nuevas. Excelente estado. Posible permuta. Financiación de hasta USD 5.000 hasta en 24 cuotas.", link:"https://picsum.photos/300/300"})
+        res([{titulo:"BMW Serie 1 2.0 120i Coupe Active 156cv", detalle: "Bmw 120i Coupé Automático Secuencial. Segundo dueño. Ficha en Scarpa, cubiertas Bridgestone nuevas. Excelente estado. Posible permuta. Financiación de hasta USD 5.000 hasta en 24 cuotas.", link:"https://picsum.photos/300/300"}])
       }, 2000)
     })
       
@@ -30,9 +30,10 @@ const ItemDetailContainer = () => {
     })
   }, elemento)
   console.log("En el container, el elemento es:", elemento)
+  let ind = 0
   return (
           <div class="">
-            <ItemDetail titulo={elemento.titulo} detalle={elemento.detalle} link={elemento.link} />
+            <ItemDetail lista={elemento} indice={ind} />
           </div>
           )
 }
